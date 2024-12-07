@@ -11,6 +11,7 @@
 body {
   background-color: #f3f2e7;
   transition: 1s linear;
+  overflow-x: hidden;
 }
 main {
   width: 100%;
@@ -24,6 +25,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 /* ------------------------------------------------ NAV -------------------------------------------------------------- */
@@ -39,22 +41,46 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: remove linear 0.5s;
 }
 .hamburger-menu {
   display: none;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid #7e8ab8;
+  border: 2px solid #7e8ab8;
   position: relative;
+  cursor: pointer;
   transition: 1s linear;
 }
-.hamburger,
-.menuX {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.line-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.line{
+  width: 70%;
+  height: 2px;
+  background: #7e8ab8;
+  transition: 0.5s linear;
+}
+.rotate1{
+  transform: rotate(45deg);
+  width: 60%;
+  margin-top: 5px;
+}
+.rotate2{
+  transform: rotate(-45deg);
+  margin-top: -7px;
+  width: 60%;
+}
+.rotate3{
+  transform: translateX(20px);
+  opacity: 0;
 }
 .hamburger-menu.active {
   .menuX {
@@ -99,18 +125,23 @@ nav {
   max-width: 496px;
   width: 100%;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
 }
 .nav-bar ul li {
-  color: #3a1700;
   font-family: Manrope;
   font-size: 16px;
   font-weight: 500;
 }
+.nav-bar ul li a{
+  color: #3a1700;
+  text-decoration: none;
+}
 .nav-bar.active {
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: 1s;
+  top: 0;
+  height: 500px;
 }
 
 .contact-btn {
@@ -130,21 +161,100 @@ nav {
 .contact-btn:hover {
   background-color: #7e8ab8;
   color: white;
+  box-shadow: 0 0 10px #7e8ab8;
 }
 
 /* -------------------------------- INTRO_CONTENT ------------------------------------------------------------ */
 
 .intro-content {
-  max-width: 1170px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
   display: flex;
+  gap: 30px;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
+.intro-content-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.intro-content-heading h1 {
+  max-width: 380px;
+  width: 100%;
+  color: #3a1700;
+  font-family: Rowdies;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 80px;
+  letter-spacing: -3px;
+  transition: 0.5s linear;
+}
+.intro-content-heading p {
+  max-width: 370px;
+  width: 100%;
+  color: rgba(58, 23, 0, 0.5);
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.intro-content-btn {
+  width: 202px;
+  height: 48px;
+  border-radius: 24px;
+  background: #7e8ab8;
+  border: none;
+  color: #fff;
+  font-family: Rowdies;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.intro-content-btn:hover {
+  background-color: transparent;
+  border: 1px solid #7e8ab8;
+  color: #7e8ab8;
+  box-shadow: 0 0 5px #7e8ab8;
+}
+.donate-img {
+  max-width: 637px;
+  max-height: 637px;
+  width: 100%;
+  height: 100%;
+}
+.intro-content-picture{
+  z-index: -3;
+}
+.intro-content-rectangle {
+  position: absolute;
+}
+
+/*------------------------------------------- FEATURES_SECTION -------------------------------------------- */
+
+
 
 
 
 /* MEDIA */
+
+@media (max-width: 1000px) {
+  .intro-content-heading h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .intro-content-heading {
+    gap: 20px;
+  }
+  .intro-section {
+    gap: 50px;
+  }
+}
 
 @media (max-width: 768px) {
   .nav-bar {
@@ -152,22 +262,46 @@ nav {
     justify-content: center;
     gap: 30px;
     width: 100%;
+    height: 0px;
     position: absolute;
-    right: 0;
-    top: 0;
+    top: -100%;
+    left: 0;
     border-bottom: 3px solid #7e8ab8;
     padding-top: 88px;
     padding-bottom: 20px;
     background-color: #f3f2e7;
     z-index: -2;
     opacity: 0;
+    transition: 1.5s;
   }
-
+  .intro-section {
+    gap: 20px;
+  }
   .nav-bar ul {
     flex-direction: column;
     text-align: center;
   }
   .hamburger-menu {
-    display: block;
+    display: flex;
+  }
+  .intro-content {
+    flex-direction: column-reverse;
+  }
+  .donate-img {
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
+@media(max-width : 450px){
+  main{
+    padding: 16px 20px;
+  }
+  .donate-img{
+    min-width: 366px;
+  }
+  .intro-content-heading h1 {
+    font-size: 56px;
+    line-height: 64px;
   }
 }
