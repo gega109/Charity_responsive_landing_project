@@ -1,16 +1,10 @@
 
-const completedDonation = document.getElementById("completedDonation")
 const exploreAllBtn = document.getElementById("exploreAllBtn")
 const cardDonation = document.getElementById("cardDonation")
 const hiddenCards = document.getElementById("hiddenCards")
-completedDonation.classList.add("complated_donation")
 async function getApi() {
     let data = await fetch('https://fakestoreapi.com/products')
     let products = await data.json()
-    products.map((product) =>{
-        completedDonation.textContent = product.price;
-
-    })
 }
 
 getApi()
