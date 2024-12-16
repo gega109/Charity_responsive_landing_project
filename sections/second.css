@@ -48,9 +48,11 @@ main {
 /* ------------------------------------------------ NAV -------------------------------------------------------------- */
 nav {
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   gap: 68px;
+  margin: 0 auto;
 }
 
 .nav-bar {
@@ -88,17 +90,17 @@ nav {
 .rotate1 {
   transform: rotate(45deg);
   width: 60%;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .rotate2 {
   transform: rotate(-45deg);
   margin-top: -7px;
   width: 60%;
 }
-.rotate3 {
+/* .rotate3 {
   transform: translateX(20px);
   opacity: 0;
-}
+} */
 .hamburger-menu.active {
   .menuX {
     display: block;
@@ -206,6 +208,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding-bottom: 162px;
+  transition: 1s;
 }
 .intro-content-heading {
   display: flex;
@@ -250,10 +254,11 @@ nav {
   text-transform: uppercase;
   cursor: pointer;
   transition: 1s;
+  margin-top: 10px;
 }
 .donate-img {
-  max-width: 637px;
-  max-height: 637px;
+  max-width: 635px;
+  max-height: 635px;
   width: 100%;
   height: 100%;
 }
@@ -262,6 +267,14 @@ nav {
 }
 .intro-content-rectangle {
   position: absolute;
+  width: 871px;
+  height: 1337px;
+  transform: rotate(45deg);
+  background: #e29f72;
+  border-radius: 80px;
+  right: -640px;
+  top: -140px;
+  z-index: -231;
 }
 
 /*------------------------------------------- DONATE_SECTION -------------------------------------------- */
@@ -669,6 +682,15 @@ nav {
 }
 /* MEDIA */
 
+@media(min-width:   1540px){
+  .intro-content-rectangle, .logo-background{
+    opacity: 0;
+    transition: 2s;
+  }
+  
+}
+
+
 @media (max-width: 1000px) {
   .intro-content-heading h1 {
     font-size: 60px;
@@ -713,6 +735,10 @@ nav {
   .intro-content {
     flex-direction: column-reverse;
   }
+  .intro-content-rectangle{
+    opacity: 0;
+    transition: 1s;
+  }
   .donate-img {
     max-width: 500px;
     max-height: 500px;
@@ -743,7 +769,9 @@ nav {
   .donate_section {
     padding: 16px 20px 48px 20px;
   }
-
+  .intro-content {
+    padding-bottom: 0;
+  }
   .donate-img {
     min-width: 366px;
   }
@@ -775,12 +803,12 @@ nav {
     width: 329px;
     height: 144px;
   }
-  .about_us_png{
+  .about_us_png {
     min-width: 391px;
   }
 }
 /* ეს ჰავერები აქ იმიტომ ჩავსვი რომ მობაილის ვერსიაზე არ იმუშაოს */
-@media(min-width: 451px){
+@media (min-width: 451px) {
   .donate_btn:hover {
     background-color: transparent;
     border: 1px solid #7e8ab8;
@@ -802,5 +830,4 @@ nav {
     color: white;
     box-shadow: 0 0 10px #7e8ab8;
   }
-   
 }

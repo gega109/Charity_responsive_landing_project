@@ -4,10 +4,12 @@ const cardDonation = document.getElementById("cardDonation")
 const hiddenCards = document.getElementById("hiddenCards")
 const hiddenCardsContainer = document.getElementById("hiddenCardsContainer")
 async function getApi() {
+  // ეს ჩემი გაკეთებული ჯსონ ფაილია და იქიდან მომაქვს ინფორმაცია
     let data = await fetch('./app.json')
     let products = await data.json()
     products.map((product) =>{
         let div  = document.createElement("div")
+        // იქმნება დონაციის ქარდები 
         div.innerHTML = `<div class="donate_card">
                 <div class="donate_card_picture">
                   <img src="${product.img}" alt="" >
@@ -30,7 +32,7 @@ async function getApi() {
 }
 
 getApi()
-
+// დონაციის ქარდების გაქრობა და გაჩენა 
 exploreAllBtn.addEventListener("click" , () =>{
     hiddenCards.classList.toggle("card_remove")
 })
