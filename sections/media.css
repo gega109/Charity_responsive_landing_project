@@ -1,0 +1,154 @@
+
+@media(min-width:   1540px){
+    .intro-content-rectangle, .logo-background{
+      opacity: 0;
+      transition: 2s;
+    }
+    
+  }
+  
+  
+  @media (max-width: 1000px) {
+    .intro-content-heading h1 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    .intro-content-heading {
+      gap: 20px;
+    }
+    .intro-section {
+      gap: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      border-bottom: 3px solid #7e8ab8;
+      padding-top: 88px;
+      padding-bottom: 20px;
+      background-color: #f3f2e7;
+      z-index: -2;
+      opacity: 0;
+      transition: 1.5s;
+    }
+    .intro-section {
+      gap: 20px;
+    }
+    .nav-bar ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hamburger-menu {
+      display: flex;
+    }
+    .intro-content {
+      flex-direction: column-reverse;
+    }
+    .intro-content-rectangle{
+      opacity: 0;
+      transition: 1s;
+    }
+    .donate-img {
+      max-width: 500px;
+      max-height: 500px;
+    }
+    .donate_features {
+      justify-content: center;
+    }
+    .donate_features_card_container,
+    .donate_features_card_box {
+      flex-direction: column;
+    }
+    .donate_features_card {
+      margin: 0 auto;
+    }
+    .about_us {
+      padding: 95px 23px;
+    }
+    .about_us_welcome {
+      flex-wrap: wrap;
+    }
+    .about_us_welcome_text {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .intro-section,
+    .donate_section {
+      padding: 16px 20px 48px 20px;
+    }
+    .intro-content {
+      padding-bottom: 0;
+    }
+    .donate-img {
+      min-width: 366px;
+    }
+    .intro-content-heading h1 {
+      font-size: 56px;
+      line-height: 64px;
+    }
+    .donate_features_card {
+      max-width: 329px;
+      width: 100%;
+      padding: 48px 28px;
+    }
+    .donate_heading h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .donate_card {
+      width: 329px;
+    }
+    .donate_card_description {
+      padding: 28px;
+    }
+    .donate_card_description h2 {
+      max-width: 269px;
+      font-size: 23px;
+      line-height: 32px;
+    }
+    .about_us_statistic_card {
+      width: 329px;
+      height: 144px;
+    }
+    .about_us_png {
+      min-width: 391px;
+    }
+    .show_text{
+      height: 420px;
+    }
+  }
+  /* ეს ჰავერები აქ იმიტომ ჩავსვი რომ მობაილის ვერსიაზე არ იმუშაოს */
+  @media (min-width: 451px) {
+    .donate_btn:hover {
+      background-color: transparent;
+      border: 1px solid #7e8ab8;
+      color: #7e8ab8;
+      box-shadow: 0 0 5px #7e8ab8;
+      color: #7e8ab8;
+    }
+    .explore_all_btn:hover {
+      background: #7e8ab8;
+      color: white;
+      box-shadow: 0 0 10px #7e8ab8;
+    }
+    .donate_card:hover,
+    .donate_features_card:hover {
+      box-shadow: 8px 8px 0 #2fb0ac27;
+    }
+    .contact-btn:hover {
+      background-color: #7e8ab8;
+      color: white;
+      box-shadow: 0 0 10px #7e8ab8;
+    }
+  }
+  
