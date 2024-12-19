@@ -1,13 +1,23 @@
 
 @media(min-width:   1540px){
-    .intro-content-rectangle, .logo-background{
+    .intro-content-rectangle, .logo-background , .footer_orange_background , .sec_help_rec{
       opacity: 0;
       transition: 2s;
     }
     
   }
   
-  
+@media(max-width: 1232px){
+  .donate_hidden_cards.card_remove{
+    height: 1100px;
+  }
+}
+
+@media(max-width: 834px){
+  .donate_hidden_cards.card_remove{
+    height: 1700px;
+  }
+}
   @media (max-width: 1000px) {
     .intro-content-heading h1 {
       font-size: 60px;
@@ -52,7 +62,7 @@
     .intro-content {
       flex-direction: column-reverse;
     }
-    .intro-content-rectangle{
+    .intro-content-rectangle  {
       opacity: 0;
       transition: 1s;
     }

@@ -1,21 +1,21 @@
 [
     {
         "img" : "./images/2black_poor_child.jpg",
-        "price1" : 6993,
+        "price1" : 0,
         "price2"  : 10000,
         "img_meaning" : "WATER",
         "description" : "Bring together people who care about a cause"
     },
     {
         "img" : "./images/poor_girl.jpg",
-        "price1" : 8793,
+        "price1" : 0,
         "price2"  : 10000,
         "img_meaning" : "FOOD",
         "description" : "Together people who care about a cause"
     },
     {
         "img" : "./images/wihte_poor_child.jpg",
-        "price1" : 5493,
+        "price1" : 0,
         "price2"  : 10000,
         "img_meaning" : "CHARITY",
         "description" : "People who care about a caus"
