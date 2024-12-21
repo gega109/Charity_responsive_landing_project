@@ -474,6 +474,7 @@ nav {
   background: #f3f2e7;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  position: relative;
 }
 .donate_card_description h2 {
   color: #3a1700;
@@ -501,15 +502,15 @@ nav {
   color: #3a1700;
   font-family: Manrope;
 }
-/* .full_donate_text{
-  overflow: hidden;
+.full_donate_text {
+  display: none;
   color: green;
-  height: 0;
+  font-size: 18px;
+  position: absolute;
+  left: 32px;
+  bottom: 4.8em;
 }
-.full_donate_text_show{
-  overflow: visible;
-  height: 10px;
-} */
+
 .donate_card_level {
   width: 100%;
   height: 8px;
@@ -519,7 +520,7 @@ nav {
 }
 .completed_donation_level {
   height: 8px;
-  width: 138px;
+  width: 0px;
   background: #2fb0ab;
   border-radius: 4px;
 }
@@ -564,7 +565,7 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.about_us_volunteer{
+.about_us_volunteer {
   flex-direction: row-reverse;
 }
 .about_us_welcome_image {
@@ -666,7 +667,8 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.static_card_text p , #hiddenText {
+.static_card_text p,
+#hiddenText {
   color: #3a1700;
   font-family: Manrope;
   font-size: 20px;
@@ -681,13 +683,13 @@ nav {
   line-height: 32px;
 }
 
-.hidden_text{
+.hidden_text {
   height: 0;
   overflow: hidden;
   transition: 1s;
 }
 
-.show_text{
+.show_text {
   height: 260px;
 }
 
@@ -713,12 +715,68 @@ nav {
   border-radius: 0;
 }
 .sec_help_rec {
+  position: absolute;
+  width: 871px;
+  height: 537px;
+  background: #e29f72;
+  border-radius: 80px;
   transform: rotate(-50deg);
-  top: -12px;
-  right: -887px;
+  top: 139px;
+  right: -498px;
+  z-index: -321312;
 }
-.charity_help_cont h1{
+.charity_help_cont h1 {
   font-size: 56px;
-  line-height: 64px; 
+  line-height: 64px;
   max-width: 460px;
+}
+
+/* --------------------------------------------- CONTACT ------------------------------------------------------------- */
+.online_contact {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  background: #f3f2e7;
+}
+.online_contact_card {
+  max-width: 480px;
+  width: 480px;
+  padding: 48px 0 48px 48px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.contact_logo_circle {
+  width: 96px;
+  height: 96px;
+  background: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_type_name {
+  color: rgba(58, 23, 0, 0.5);
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.contact_method {
+  text-decoration: none;
+  color: #3a1700;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+
+/* ----------------------------------- FOOTER --------------------------------------------- */
+
+footer{
+  width: 100%;
+  background: #E29F72;
+  height: 500px;
 }
