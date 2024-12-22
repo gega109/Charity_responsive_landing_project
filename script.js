@@ -109,7 +109,7 @@ let footerArr = [
   {
     contact_logo : "images/gmail_icon.png",
     contact_name : "Mail",
-    contact_method : "andriaghurchumelia4@gmail.com",
+    contact_method : "andria4@gmail.com",
     background : "#E3E1CB",
     link : "https://mail.google.com/mail/u/0/#drafts?compose=DmwnWrRqhSJwLTbsllkzrdcPQMmkPRrLqNwLdthglXFKSQrGTJhFvVQdwhvXqxMtKczTwsWKRHfQ"
   },
@@ -125,8 +125,9 @@ let footerArr = [
 let mainDiv = document.getElementById("onlineContactBox")
 footerArr.map((product) =>{
   let div = document.createElement("div")
+  div.style.background = `${product.background}`
+  div.classList.add("online_contact_card")
   div.innerHTML = `
-  <div class="online_contact_card" style="background: ${product.background}">
         <div class="contact_logo">
           <div class="contact_logo_circle">
             <img src="${product.contact_logo}" alt="">
@@ -136,8 +137,6 @@ footerArr.map((product) =>{
             <p class="contact_type_name">${product.contact_name}</p>
             <a href="${product.link}" target="_blank" class="contact_method">${product.contact_method}</a>
           </div>
-    </div>
   `
-
   mainDiv.appendChild(div)
 })

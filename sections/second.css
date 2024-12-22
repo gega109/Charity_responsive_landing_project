@@ -738,14 +738,15 @@ nav {
   margin: 0 auto;
   max-width: 1440px;
   background: #f3f2e7;
+  justify-content: center;
 }
-.online_contact_card {
-  max-width: 480px;
-  width: 480px;
-  padding: 48px 0 48px 48px;
+.online_contact_card{
+  width: 100%;
+  padding: 48px;
   display: flex;
   align-items: center;
   gap: 32px;
+  transition: 1s;
 }
 .contact_logo_circle {
   width: 96px;
@@ -779,4 +780,5 @@ footer{
   width: 100%;
   background: #E29F72;
   height: 500px;
+  padding: 135px 74px 135px 54px;
 }
