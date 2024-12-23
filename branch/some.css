@@ -6,16 +6,7 @@
   font-family: rowdies;
   src: url(./fonts/Rowdies/Rowdies-Regular.ttf);
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-body {
-  display: flex;
-  justify-content: center;
-  height: 700vh;
-  overflow-x: hidden;
-}
+
 .con {
   display: flex;
   flex-direction: column;

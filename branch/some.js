@@ -9,41 +9,6 @@ let animationExp = document.getElementById("animation");
 let closeButton = document.getElementById("close_button");
 let explorebox = document.getElementById("explore_box1");
 
-// let exploreMassive = [
-//   {
-//     exploreHeader: "Charity",
-//     exploreText:
-//       "A charity must have one or more of the purposes which have been defined in law.",
-//     exploreButton: "LEARN MORE",
-//   },
-//   {
-//     exploreHeader: "Food",
-//     exploreText:
-//       "These include things like: relieving poverty, education, religion, protecting the environment.",
-//     exploreButton: "LEARN MORE",
-//   },
-//   {
-//     exploreHeader: "Water",
-//     exploreText:
-//       "Education, environment, animal welfare, human rights and community development.",
-//     exploreButton: "LEARN MORE",
-//   },
-// ];
-// exploreMassive.map((person) => {
-//   explorebox.innerHTML = `
-//     <div class="Charity">
-//       <div class="ic_div">
-//         <img src="./iconsandimages/charity.svg" alt="charity_icon" />
-//         <h3 class="icon_head">${person.exploreHeader}</h3>
-//       </div>
-//       <div class="line_div"></div>
-//       <span class="Services_text">
-//       ${person.exploreText}
-//       </span>
-//       <button class="Learn_button">${person.exploreButton}</button>
-//     </div>
-//   `;
-// });
 
 explorerBtn.addEventListener("click", () => {
   if (animationExp.classList.contains("animate")) {
