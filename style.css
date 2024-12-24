@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Atomic+Age&family=Big+Shoulders+Display:wght@100..900&family=Bungee+Spice&family=Coda:wght@400;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Atomic+Age&family=Big+Shoulders+Display:wght@100..900&family=Bungee+Spice&family=Coda:wght@400;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-
-
 @font-face {
   font-family: manrope;
   src: url(./fonts/Manrope/Manrope-VariableFont_wght.ttf);
@@ -28,7 +26,6 @@ body {
 }
 main {
   width: 100%;
-  padding: 0 0 16px 0;
   display: flex;
   flex-direction: column;
 }
@@ -41,6 +38,7 @@ main {
   padding: 20px 26px;
   z-index: 321;
   background: #f3f2e7;
+  position: relative;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -136,14 +134,9 @@ nav {
 }
 
 .logo-orange-background {
-  width: 1330px;
-  height: 900px;
-  top: -573px;
-  left: -1270px;
-  transform: rotate(45deg);
   position: absolute;
-  border-radius: 80px;
-  background-color: #e29f72;
+  top: 0;
+  left: 0;
   z-index: -9999;
 }
 .logo_circle {
@@ -219,7 +212,6 @@ nav {
   gap: 30px;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   padding-bottom: 162px;
   transition: 1s;
 }
@@ -279,13 +271,15 @@ nav {
 }
 .intro-content-rectangle {
   position: absolute;
-  width: 871px;
+  /* width: 871px;
   height: 1337px;
   transform: rotate(45deg);
   background: #e29f72;
   border-radius: 80px;
   right: -640px;
-  top: -140px;
+  top: -140px; */
+  right: 0;
+  top: -50px;
   z-index: -231;
 }
 
@@ -432,12 +426,7 @@ nav {
   gap: 30px;
   flex-wrap: wrap;
   transition: 1s ease-in-out;
-}
-.donate_hidden_cards.card_remove {
-  opacity: 1;
-  height: 500px;
-  overflow: visible;
-  transition: 1s;
+  overflow: hidden;
 }
 .donate_card {
   max-width: 370px;
@@ -459,6 +448,16 @@ nav {
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+.donate_hidden {
+  opacity: 0;
+  display: none;
+  transition: 1s;
+}
+.donate_hidden_second {
+  opacity: 0;
+  display: none;
+  transition: 1s;
 }
 .donate_card_picture_meaning {
   width: 65px;
@@ -562,6 +561,7 @@ nav {
   width: 100%;
   background: #f3f2e7;
   padding: 175px 26px;
+  margin-bottom: 90px;
 }
 .about_us_main {
   display: flex;
@@ -725,17 +725,15 @@ nav {
   transform: rotate(90deg);
 }
 .footer_orange_background {
-  border-radius: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -321321;
 }
 .sec_help_rec {
   position: absolute;
-  width: 871px;
-  height: 537px;
-  background: #e29f72;
-  border-radius: 80px;
-  transform: rotate(-50deg);
-  top: 139px;
-  right: -498px;
+  top: 0;
+  right: 0;
   z-index: -321312;
 }
 .charity_help_cont h1 {
@@ -753,7 +751,7 @@ nav {
   background: #f3f2e7;
   justify-content: center;
 }
-.online_contact_card{
+.online_contact_card {
   width: 100%;
   padding: 48px;
   display: flex;
@@ -786,24 +784,114 @@ nav {
   line-height: 32px;
 }
 
-
 /* ----------------------------------- FOOTER --------------------------------------------- */
 
-
-footer{
+footer {
   width: 100%;
-  background: #E29F72;
-  height: 500px;
-  padding: 135px 74px 135px 54px;
+  background: #e49764;
+  padding: 74px 135px 54px 135px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1540px;
+  margin: 0 auto;
+  gap: 64px;
+}
+.footer_header {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_header_logo {
+  color: #fff;
+  font-family: Rowdies;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: -1px;
+  margin-top: -15px;
+}
+.footer_header_menu {
+  max-width: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.footer_global_heading {
+  color: #fff;
+  font-family: Rowdies;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer_header_menu_btns {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.footer_header_icons {
+  max-width: 160px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.footer_header_icon_circle {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #ffb200;
+}
+.footer_copyright_container {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+.footer_line {
+  max-width: 1170px;
+  width: 100%;
+  opacity: 0.16;
+  background: #fff;
+  height: 1px;
+}
 
-
-
-/* gegas mxare */
-
-
-
+.footer_copyright_text{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+}
+.copyright br{
+  display: none;
+}
+.footer_privacy_policy {
+  display: flex;
+  gap: 73px;
+}
+.footer_privacy_policy p {
+  color: #fff;
+  text-align: right;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+/* ------------------------------------------------------------------------- GEGA SECTION ----------------------------------------------------------- */
 
 .con {
   /* display: flex;

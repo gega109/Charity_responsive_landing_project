@@ -3,6 +3,8 @@
     .intro-content-rectangle, .logo-background , .footer_orange_background , .sec_help_rec{
       opacity: 0;
       transition: 2s;
+      overflow: hidden;
+      display: none;
     }
     .online_contact_card{
       max-width: 480px;
@@ -10,9 +12,7 @@
   }
 
 @media(max-width: 1239px){
-  .donate_hidden_cards.card_remove{
-    height: 1100px;
-  }
+  
 .online_contact {
   flex-direction: column;
 }
@@ -20,9 +20,9 @@
   justify-content: center;
 }
 }
-@media(max-width: 834px){
-  .donate_hidden_cards.card_remove{
-    height: 1700px;
+@media(max-width: 892px){
+  .footer_copyright_text{
+    justify-content: center;
   }
 }
   @media (max-width: 1000px) {
@@ -72,6 +72,8 @@
     .intro-content-rectangle ,.sec_help_rec  {
       opacity: 0;
       transition: 1s;
+      overflow: hidden;
+      display: none;
     }
     .donate-img {
       max-width: 500px;
@@ -96,6 +98,15 @@
     .about_us_welcome_text {
       gap: 15px;
     }
+    footer{
+      padding: 121px 52px 38px 52px;
+    }
+    .footer_header{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 48px;
+    }
   }
   
   @media (max-width: 450px) {
@@ -105,9 +116,6 @@
     }
     .intro-content {
       padding-bottom: 0;
-    }
-    .donate-img {
-      min-width: 366px;
     }
     .intro-content-heading h1 {
       font-size: 56px;
@@ -137,9 +145,6 @@
       width: 329px;
       height: 144px;
     }
-    .about_us_png {
-      min-width: 391px;
-    }
     .show_text{
       height: 420px;
     }
@@ -147,6 +152,12 @@
       justify-content: flex-start;
       padding: 48px 23px;
       height: 192px;
+    }
+    .copyright br{
+      display: block;
+    }
+    .footer_privacy_policy {
+      gap: 65px;
     }
   }
   /* ეს ჰავერები აქ იმიტომ ჩავსვი რომ მობაილის ვერსიაზე არ იმუშაოს */
